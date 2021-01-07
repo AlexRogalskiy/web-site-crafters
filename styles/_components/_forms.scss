@@ -1,0 +1,118 @@
+/* */
+/* Forms */
+/* */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+
+  & + input,
+  & + select,
+  & + textarea {
+    margin-top: 6px;
+  }
+}
+
+input:not([type=radio]):not([type=range]),
+select,
+textarea {
+  padding: 24px 16px 16px;
+  width: 100%;
+  color: var(--color-black);
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  transition: border-color var(--tr-part);
+
+  &:focus {
+    border-color: var(--color-black);
+    outline: 0;
+  }
+}
+
+[type=range] {
+  width: 100%;
+  color: var(--color-black);
+  border: 1px solid #e9e9e9;
+}
+
+textarea {
+  min-height: 120px;
+  box-shadow: none; // Remove red box shadow in Firefox
+  resize: vertical;
+}
+
+.input {
+  &--absolute {
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 22px;
+      left: 17px;
+      font-size: 16px;
+      color: var(--color-gray-light);
+      transition: var(--tr-full);
+    }
+
+    input:focus + label,
+    input:valid + label,
+    textarea:focus + label,
+    textarea:valid + label {
+      font-size: 12px;
+      color: var(--color-black);
+      transform: translateY(-15px);
+    }
+  }
+
+  &--with-error {
+    border-color: var(--color-brand);
+  }
+}
+
+/* Hidden input for spam and bots - Replacement for Captcha */
+.input--username {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Custom radio input */
+.radio-radio {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 2px solid var(--color-black);
+    border-radius: 50%;
+    transition: var(--tr-full);
+  }
+}
+
+[type=radio]:checked + .radio-wrapper {
+  &::before {
+    background: var(--color-black);
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+}
+
+.radio-label {
+  display: block;
+  margin-left: 8px;
+  font-size: 15px;
+}

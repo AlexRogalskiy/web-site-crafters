@@ -1,0 +1,49 @@
+/* */
+/* Icons */
+.icon--big {
+  width: 190px;
+  height: 190px;
+  object-fit: scale-down;
+}
+
+.icon--medium {
+  width: 150px;
+  height: 150px;
+  object-fit: scale-down;
+}
+
+.icon--typescript,
+.icon--gatsbyjs,
+.icon--next-js,
+.icon--mongodb {
+  line-height: 1;
+
+  img {
+    width: 60px;
+    height: 60px;
+    line-height: 1;
+  }
+}
+
+.icon--typescript {
+  img {
+    filter: grayscale(100%) invert(100) brightness(1000%);
+  }
+}
+
+.icon--gatsbyjs {
+  img {
+    filter: grayscale(100%) invert(100) brightness(0%);
+  }
+}
+
+.icon--mongodb {
+  img {
+    width: 100px;
+    filter: grayscale(100%) invert(100%) brightness(0);
+  }
+}
+
+.icon--faded {
+  filter: contrast(20%) brightness(100%);
+}

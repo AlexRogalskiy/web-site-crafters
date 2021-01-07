@@ -1,0 +1,30 @@
+/* Footer */
+.footer {
+  background-color: var(--color-black);
+
+  .list--inline-item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  a,
+  .footer__copy {
+    color: var(--color-white);
+  }
+
+  a {
+    transition: color var(--tr-part);
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  [class*=fa-] {
+    font-size: 22px;
+  }
+}
+
+.footer__copy {
+  margin-bottom: 0;
+  font-size: 13px;
+}

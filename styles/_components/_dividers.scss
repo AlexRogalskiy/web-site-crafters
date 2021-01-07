@@ -1,0 +1,36 @@
+/* Dividers */
+.divider {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 40px;
+  height: 1px;
+
+  &--black {
+    background-color: var(--color-black);
+  }
+
+  &--center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--gray {
+    background-color: var(--color-gray);
+  }
+
+  &--red {
+    background-color: var(--color-brand);
+  }
+
+  &--slim {
+    height: 1px;
+  }
+
+  &--thick {
+    height: 4px;
+  }
+
+  &--white {
+    background-color: var(--color-white);
+  }
+}

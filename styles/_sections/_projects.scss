@@ -1,0 +1,136 @@
+/* Projects */
+.masonry-wrapper {
+  margin-right: -15px;
+  margin-left: -15px;
+
+  [class*=col] + [class*=col] {
+    margin-top: 21px;
+
+    @media (min-width: 576px) {
+      margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 32px;
+    }
+  }
+
+  [class*=col] {
+    @media (min-width: 768px) {
+      &:nth-of-type(2) {
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: 992px) {
+      &:nth-of-type(3) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.projects__wrapper {
+  position: relative;
+  padding: 12px;
+  width: 100%;
+  background-color: #181b1f;
+  border-radius: var(--radius-small);
+  box-shadow: 0 12px 18px 0 rgba(0, 0, 0, .3);
+  transition: all .25s ease-out;
+  overflow: hidden;
+}
+
+[class*=col-]:first-child .projects__wrapper {
+  min-height: 210px;
+}
+
+[class*=col-]:nth-child(2) .projects__wrapper {
+  min-height: 230px;
+}
+
+[class*=col-]:nth-child(3) .projects__wrapper {
+  min-height: 240px;
+}
+
+[class*=col-]:nth-child(4) .projects__wrapper {
+  min-height: 210px;
+}
+
+[class*=col-]:nth-child(5) .projects__wrapper {
+  min-height: 230px;
+}
+
+[class*=col-]:nth-child(6) .projects__wrapper {
+  min-height: 235px;
+}
+
+[class*=col-]:last-child .projects__wrapper {
+  min-height: 240px;
+}
+
+.projects__wrapper:hover {
+  margin-top: -4px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .2);
+}
+
+.projects__btn {
+  margin: auto;
+  max-width: 250px;
+}
+
+.projects__projects-btn {
+  margin: auto;
+}
+
+.projects__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 14px 14px 24px;
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .45) 70%, transparent);
+  transition: top .25s ease-out, left .25s ease-out;
+}
+
+.projects__project-name,
+.projects__project-name a,
+.projects__project-type {
+  margin-bottom: 8px;
+  line-height: 1;
+  color: inherit;
+  user-select: none;
+}
+
+.projects__project-name,
+.projects__project-name a {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.projects__project-type {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.projects__thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .25s ease-out;
+  object-fit: cover;
+}
+
+.projects__wrapper:hover .projects__thumbnail {
+  transform: scale(1.1);
+
+  @media (min-width: 768px) {
+    transform: scale(1.15);
+  }
+}
